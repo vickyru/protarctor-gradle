@@ -26,6 +26,14 @@ export let config: Config = {
   onPrepare: () => {
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   },
+  specDone: function(result) {
+    console.log('Spec: ' + result.description + ' was ' + result.status);
+    for(var i = 0; i < result.failedExpectations.length; i++) {
+      console.log('Failure: ' + result.failedExpectations[i].message);
+      console.log(result.failedExpectations[i].stack);
+    }
+    console.log(result.passedExpectations.length);
+  },
   params: {
       baseUrl: 'https://angularjs.org'
   },
