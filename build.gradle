@@ -50,3 +50,8 @@ task npmStopWebDrive(type: NpmTask) {
     description 'Stop webdriver Manager'
     args = ['run','stop-webdriver']
 }
+
+task npmGenerateReport(type: NpmTask) {
+    description 'Generate Allure Reports'
+    args = ['run','genrate-report']
+}

@@ -24,7 +24,14 @@ export let config: Config = {
   maxSessions: 2,
   noGlobals: true,
   onPrepare: () => {
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+    const AllureReporter = require('jasmine-allure-reporter');
+    jasmine.getEnv().addReporter(new AllureReporter({
+      resultsDir: 'allure-reports/xml-results'
+    })),
+    jasmine.getEnv().addReporter(new SpecReporter({ 
+      spec: 
+        { displayStacktrace: true } 
+    }));
   },
   specDone: function(result) {
     console.log('Spec: ' + result.description + ' was ' + result.status);
