@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "update-webdriver": "./node_modules/.bin/webdriver-manager update",
-    "start-webdriver": "./node_modules/.bin/webdriver-manager start",
+    "start-webdriver": "./node_modules/.bin/webdriver-manager start &",
     "stop-webdriver": "./node_modules/.bin/webdriver-manager shutdown",
     "pretest": "tsc",
     "test": "./node_modules/.bin/protractor /home/prashant/code-repo/protarctor/pro-doc-test-repo/dist/out-tsc/protractor.conf.js"
