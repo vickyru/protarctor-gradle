@@ -9,6 +9,7 @@
     "stop-webdriver": "./node_modules/.bin/webdriver-manager shutdown",
     "pretest": "tsc",
     "test": "./node_modules/.bin/protractor /home/prashant/code-repo/protarctor-gradle/dist/out-tsc/protractor.conf.js",
+    "pregenrate-report":"rm -rf allure-reports",
     "genrate-report": "./node_modules/.bin/allure generate ./allure-reports/xml-results --clean --report-dir ./allure-reports/html-reports || true",
     "launch-report": "./node_modules/.bin/allure open ./allure-reports/html-reports"
   },
