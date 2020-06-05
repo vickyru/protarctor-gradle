@@ -8,8 +8,8 @@
     "start-webdriver": "./node_modules/.bin/webdriver-manager start &",
     "stop-webdriver": "./node_modules/.bin/webdriver-manager shutdown",
     "pretest": "tsc",
-    "test": "./node_modules/.bin/protractor /home/prashant/code-repo/protarctor-gradle/dist/out-tsc/protractor.conf.js",
-    "pregenrate-report":"rm -rf allure-reports",
+    "test": "./node_modules/.bin/protractor /home/prashant/code-repo/protarctor-gradle/protractor.conf.js",
+    "pregenrate-report": "rm -rf allure-reports",
     "genrate-report": "./node_modules/.bin/allure generate ./allure-reports/xml-results --clean --report-dir ./allure-reports/html-reports || true",
     "launch-report": "./node_modules/.bin/allure open ./allure-reports/html-reports"
   },
@@ -20,7 +20,8 @@
     "protractor": "5.4.3",
     "jasmine-spec-reporter": "4.2.1",
     "jasmine-allure-reporter": "1.0.2",
-    "allure-commandline": "2.13.0"
+    "allure-commandline": "2.13.0",
+    "allure-js-commons": "2.0.0-beta.7"
   },
   "devDependencies": {
     "@types/jasmine": "^3.3.0",
